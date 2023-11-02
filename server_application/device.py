@@ -1,12 +1,13 @@
 import json
 
 
-class Convector:
-    def __init__(self, name, id, state):
-        self.id = id
+class Device:
+    def __init__(self, name, id, state, description=""):
         self.name = name
+        self.id = id
         self.is_on = state
         self.is_off = not self.is_on
+        self.description = description
 
     def __str__(self):
         return f'Convector {self.name} id: {self.id} state: {self.is_on}'
@@ -20,6 +21,9 @@ class Convector:
     def to_json(self):
         return {self.name: {"id": self.id, "state": self.is_on}}
 
+    def set_description(self, description):
+        self.description = description
 
-c = Convector("convector", 0, False)
+
+c = Device("convector", 0, False)
 print(c.to_json())
