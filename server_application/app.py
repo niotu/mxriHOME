@@ -28,3 +28,8 @@ def all_devices():
     for device in devices:
         res.update(device.to_json())
     return res
+
+
+@app.route('/device<device_id>')
+def device_id(device_id):
+    return devices[device_id].to_json()
