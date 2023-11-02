@@ -1,0 +1,12 @@
+*.iml
+android_stuff/.gradle
+android_stuff/.idea
+android_stuff/.DB_store
+android_stuff/build
+android_stuff/captures
+android_stuff/local.properties
+android_stuff/.externalNativeBuild
+android_stuff/.cxx
+
+server_application/.idea
+server_application/CONSTANTS
