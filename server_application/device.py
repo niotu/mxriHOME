@@ -1,6 +1,10 @@
 import json
 
 
+def get_int_from_bool(value):
+    return 1 if value else 0
+
+
 class Device:
     def __init__(self, name, id, state, description=""):
         self.name = name
@@ -19,7 +23,7 @@ class Device:
         self.is_on = False
 
     def to_json(self):
-        return {self.name: {"id": self.id, "state": self.is_on}}
+        return {self.name: {"id": self.id, "state": get_int_from_bool(self.is_on)}}
 
     def set_description(self, description):
         self.description = description
