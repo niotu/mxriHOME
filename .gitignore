@@ -10,3 +10,5 @@ android_stuff/.cxx
 
 server_application/.idea
 server_application/CONSTANTS
+
+*.log
